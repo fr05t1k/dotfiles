@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+      - file: src={{ curdir }}/files/{{ item }} dest=~/.{{ item }} state=link force=yes
+        with_items:
+          - bashrc
