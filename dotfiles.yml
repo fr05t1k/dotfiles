@@ -3,4 +3,8 @@
   tasks:
       - file: src={{ curdir }}/files/{{ item }} dest=~/.{{ item }} state=link force=yes
         with_items:
+          - bash_aliases
           - bashrc
+          - bash_git
+          - profile
+          - bash_profile
