@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 
 export GOPATH=$HOME/go
-export PATH=$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/bin:$GOPATH/bin:$PATH
+export PATH=$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/bin:$GOPATH/bin:$HOME/go/bin:$PATH
 
 export DEFAULT_USER="$USER"
 
@@ -57,7 +57,7 @@ POWERLEVEL9K_MODE='awesome-patched'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize extract brew)
+plugins=(autoenv git colorize extract)
 
 source $ZSH/oh-my-zsh.sh
 
