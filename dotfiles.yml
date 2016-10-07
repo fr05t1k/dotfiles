@@ -1,9 +1,11 @@
 ---
 - hosts: all
   tasks:
+      - command: sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
       - git: repo=https://github.com/bhilburn/powerlevel9k.git
           dest=~/.oh-my-zsh/custom/themes/powerlevel9k
-      - file: src={{ curdir }}/files/{{ item }} dest=~/.{{ item }} state=link force=yes
+
+      - file: src={{ playbook_dir }}/files/{{ item }} dest=~/.{{ item }} state=link force=yes
         with_items:
           - bash_aliases
           - bashrc

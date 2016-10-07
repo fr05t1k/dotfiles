@@ -1,7 +1,9 @@
 
 
 install_dotfiles:
-	ansible-playbook dotfiles.yml -i local -vv -e curdir=$(CURDIR)
+    sudo apt-get update
+    sudo apt-get install zsh
+	ansible-playbook dotfiles.yml -i local -vv
 
 install_ansible:
 	sudo apt-get install software-properties-common
